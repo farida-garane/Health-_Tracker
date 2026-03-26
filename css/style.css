@@ -1,0 +1,172 @@
+/* ==============================
+   PAGE D'ACCUEIL
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #cce0ff, #a0c4ff);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.homesection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 90%;
+  min-height: 140vh;
+  margin: 50px auto;
+  padding: 50px;
+  gap: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homesection:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Titre principal */
+.homesection h1 {
+  font-size: 60px;
+  color: #0d47a1;
+  text-align: center;
+  white-space: nowrap;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.homesection h1:hover {
+  box-shadow: 0 5px 12px rgba(0,0,0,0.35);
+}
+
+/* Paragraphe */
+.homesection p {
+  width: 95%;
+  white-space: normal;
+  font-size: 28px;
+  text-align: center;
+  color: #2b4f9c;
+  background-color: #e8f0ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* Zone des boutons */
+.navigators {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navigators button {
+  width: 200px;
+  height: 70px;
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e3ecff;
+  color: #0d47a1;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+              transform 0.2s ease,
+              box-shadow 0.3s ease;
+}
+
+.navigators button:hover {
+  background-color: #0d47a1;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* Message central */
+.navigators div {
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  min-height: 100px;
+  font-size: 25px;
+  text-align: center;
+  background-color: #e8f0ff;
+  color: #2b4f9c;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* Bouton Continuer */
+#btncontinue {
+  margin-top: 300px;
+  width: 180px;
+  height: 55px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease,
+              box-shadow 0.3s ease,
+              opacity 0.2s ease;
+}
+
+#btncontinue:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  opacity: 0.95;
+}
+
+/*  Media Queries pour responsive */
+  
+@media screen and (max-width: 768px) {
+  .homesection h1 {
+    font-size: 45px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .homesection p {
+    font-size: 22px;
+    padding: 15px;
+  }
+
+  .navigators button {
+    width: 150px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .navigators div {
+    font-size: 20px;
+    width: 85%;
+    padding: 20px;
+  }
+
+  #btncontinue {
+    width: 160px;
+    height: 50px;
+    font-size: 18px;
+    margin-top: 200px;
+  }
+}

@@ -1,0 +1,94 @@
+/*
+   PAGE CONSEILS */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #cce0ff, #a0c4ff);
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 90%;
+  min-height: 700px;
+  margin: 30px auto;
+  font-size: 28px; 
+  border-radius: 18px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  transition: border ,transform .4s ease, box-shadow .4s ease;
+}
+
+.tips:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.tips h1 {
+  margin-left: 350px;
+  padding: 15px;
+  font-size: 60px; 
+  color: #0d47a1;
+  border: none;
+  border-radius: 20px;
+  width: 500px;
+  white-space: nowrap;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+.tips h1:hover {
+  box-shadow: 0 5px 12px rgba(0,0,0,0.35);
+}
+
+.tip-section {
+  margin-left: 50px;
+  font-size: 30px; 
+}
+
+.tip-section h3 {
+  position: relative;
+  padding-left: 45px;
+  color: #1976d2;
+  font-size: 32px; 
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.tip-section h3:hover {
+  color: #0d47a1; 
+}
+
+.tip-section h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #1976d2;
+}
+
+/* Media queries pour responsive */
+@media screen and (max-width: 768px) {
+  .tips h1 {
+    font-size: 45px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tip-section h3 {
+    font-size: 26px;
+  }
+  .tip-section {
+    font-size: 22px;
+    margin-left: 20px;
+  }
+}

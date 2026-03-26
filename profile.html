@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile.css">
+    <title>Profil Santé</title>
+</head>
+<body>
+
+<main class="profile">
+    <h1>Profil Santé</h1>
+
+    <form id="profileform">
+
+        <label for="name">Nom</label>
+        <input type="text" id="name" placeholder="Entrer votre nom">
+
+        <label for="profilefull">Prénom</label>
+        <input type="text" id="profilefull" placeholder="Entrer votre prénom">
+
+        <label for="birthday">Date de naissance</label>
+        <input type="date" id="birthday">
+
+        <label for="phone">Contact</label>
+        <input type="text" id="phone" placeholder="Entrer votre contact">
+
+        <label for="sex">Sexe</label>
+        <select id="sex">
+            <option value="">-- Choisir --</option>
+            <option>Homme</option>
+            <option>Femme</option>
+            <option>Autre</option>
+        </select>
+
+        <label for="height">Taille</label>
+        <input type="text" id="height">
+
+        <label for="weight">Poids</label>
+        <input type="text" id="weight">
+
+        <label for="blood">Groupe sanguin</label>
+        <select id="blood">
+            <option value="">-- Choisir --</option>
+            <option>A</option>
+            <option>B</option>
+            <option>AB</option>
+            <option>O</option>
+        </select>
+
+        <label for="physics">Activités physiques</label>
+        <select id="physics">
+            <option value="">-- Choisir --</option>
+            <option>Football</option>
+            <option>Basketball</option>
+            <option>Volley-ball</option>
+            <option>Aucun</option>
+        </select>
+
+        <label for="allergy">Avez-vous une allergie ?</label>
+        <select id="allergy">
+            <option value="">-- Choisir --</option>
+            <option value="oui">Oui</option>
+            <option value="non">Non</option>
+        </select>
+
+        <!-- ALLERGIE (CACHÉ PAR DÉFAUT) -->
+        <label for="allergietext" id="allergyLabel">Entrez votre allergie</label>
+        <input type="text" id="allergietext">
+
+        <label for="disease">Maladie</label>
+        <select id="disease">
+            <option value="">-- Choisir --</option>
+            <option>Chronique</option>
+            <option>Héréditaire</option>
+            <option>Autre</option>
+        </select>
+
+        <!-- MALADIE (CACHÉ PAR DÉFAUT) -->
+        <label for="maladie" id="diseaseLabel">Entrez le nom la maladie</label>
+        <input type="text" id="maladie">
+
+    </form>
+</main>
+
+<footer>
+    <button class="profilebut" id="profilebut"  id>Continuer</button>
+</footer>
+
+<script src="js/profile.js"  defer></script>
+
+</body>
+</html>

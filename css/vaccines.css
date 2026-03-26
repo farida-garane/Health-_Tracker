@@ -1,0 +1,263 @@
+/* 
+   PAGE VACCINS
+ */
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #cce0ff, #a0c4ff);
+}
+
+.vaccine {
+  width: 80%;
+  min-height: 120vh;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  transition: transform .4s ease, box-shadow .4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: none;
+}
+
+.vaccine:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.45);
+}
+
+.vaccine h1 {
+  text-align: center;
+  font-size: 45px;
+  color: #0d47a1;
+  background: #e8f0ff;
+  width: 300px;
+  height: 90px;
+  margin: 0 auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* formulaire */
+.vaccineform {
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: 350px 350px;
+  gap: 30px 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+.vaccineform label {
+  text-align: right;
+  font-size: 25px;
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+.vaccineform input,
+.vaccineform select {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid #cfd8ff;
+  font-size: 18px;
+  transition: 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vaccineform input:focus,
+.vaccineform select:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 8px rgba(25,118,210,0.4);
+  outline: none;
+}
+
+.vaccineform input:hover,
+.vaccineform select:hover {
+  transform: translateY(-2px);
+}
+
+#addvaccine{
+  grid-column: 2;
+  width: 300px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 18px;
+  padding: 10px;
+  color: white;
+  background-color: #1976d2;
+  border: none;
+  
+}
+
+/* 
+   CHAMPS CACHÉS
+ */
+#vaccinediv {
+  display: grid;
+  grid-template-columns: 350px 350px;
+  gap: 30px 70px;
+}
+
+#vaccinediv label {
+  text-align: right;
+  align-self: center;
+}
+
+#vaccinediv input {
+  width: 100%;
+  max-width: 350px;
+}
+
+/* CONTENEUR DE TABLE */
+.tablevac {
+  width: 100%;
+  height: auto;
+  border-collapse: collapse;
+  text-align: center;
+  background: #f9fbff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.tablevac th {
+  background: #1976d2;
+  color: white;
+  font-size: 18px;
+}
+
+.tablevac th,
+.tablevac td {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+.tablevac tr {
+  transition: 0.2s;
+}
+
+.tablevac tr:hover {
+  background: #e8f0ff;
+}
+
+.vaccine h4 {
+  text-align: center;
+  font-size: 22px;
+  color: #0d47a1;
+  background: #f4f4f4;
+  width: 320px;
+  height: 70px;
+  margin: auto;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* 
+   BOUTON SUPPRIMER
+ */
+.tablevac button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #e53935;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tablevac button:hover {
+  background: #c62828;
+}
+
+/* BOUTON CONTINUER */
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.vaccinebut {
+  width: 220px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.vaccinebut:hover {
+  background: #0d47a1;
+  transform: translateY(-3px);
+}
+
+/*
+    RÉDUCTION DES ÉCRITURES
+ */
+@media (max-width: 1024px) {
+
+  .vaccine {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .vaccine h1 {
+    font-size: 34px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .vaccineform {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vaccineform label {
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .vaccineform input,
+  .vaccineform select {
+    font-size: 16px;
+  }
+
+  #vaccinediv {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tablevac th {
+    font-size: 16px;
+  }
+
+  .tablevac td {
+    font-size: 15px;
+  }
+
+  .vaccine h4 {
+    font-size: 18px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .vaccinebut {
+    font-size: 20px;
+    width: 200px;
+  }
+}

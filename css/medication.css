@@ -1,0 +1,253 @@
+/* 
+   FOND GLOBAL
+ */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #cce0ff, #a0c4ff);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* 
+   CONTENEUR PRINCIPAL
+ */
+.medication {
+  width: 80%;
+  margin: 40px auto;
+  padding: 40px 50px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.medication:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.45);
+}
+
+/* 
+   TITRE
+*/
+.medication h1 {
+  text-align: center;
+  font-size: 60px;
+  width: 450px;
+  height: 120px;
+  margin: 0 auto;
+  color: #0d47a1;
+  background: #f4f4f4;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* 
+   TEXTE RAPPEL
+ */
+#reminder {
+  text-align: center;
+  font-size: 22px;
+  color: #0d47a1;
+  background: #e8f0ff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/*
+   FORMULAIRE
+ */
+#formulaire {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 35px 50px;
+  align-items: center;
+}
+
+/* Labels */
+#formulaire label {
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+/* Inputs */
+#formulaire input {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f9fbff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+#formulaire input:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 5px 15px rgba(25,118,210,0.45);
+  transform: scale(1.03);
+}
+
+/*
+   BOUTON AJOUTER
+*/
+#addmed {
+  grid-column: 2;
+  width: 300px;
+  height: 55px;
+  font-size: 24px;
+  border: none;
+  border-radius: 12px;
+  background: #e8f0ff;
+  color: #1976d2;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+#addmed:hover {
+  background: #1976d2;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* 
+   TABLEAU MÉDICAMENTS
+ */
+.tablemed {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background: #f9fbff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+}
+
+.tablemed th {
+  background: #1976d2;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+}
+
+.tablemed td {
+  padding: 14px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+}
+
+.tablemed tr:hover {
+  background: #e8f0ff;
+}
+
+/* 
+   BOUTON SUPPRIMER
+ */
+.tablemed button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #e53935;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tablemed button:hover {
+  background: #c62828;
+}
+
+/* 
+   BOUTON CONTINUER
+ */
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.btnmed {
+  width: 280px;
+  height: 60px;
+  font-size: 26px;
+  border-radius: 15px;
+  border: none;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+.btnmed:hover {
+  background: #0d47a1;
+  transform: translateY(-3px);
+}
+
+/* 
+   MEDIA QUERY — RÉDUCTION DES ÉCRITURES
+ */
+@media (max-width: 1024px) {
+
+  .medication {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .medication h1 {
+    font-size: 42px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #reminder {
+    font-size: 18px;
+  }
+
+  #formulaire {
+    grid-template-columns: 1fr;
+  }
+
+  #formulaire label {
+    text-align: left;
+    font-size: 22px;
+  }
+
+  #formulaire input {
+    font-size: 16px;
+  }
+
+  #addmed {
+    grid-column: auto;
+    width: 220px;
+    font-size: 20px;
+  }
+
+  .tablemed th {
+    font-size: 16px;
+  }
+
+  .tablemed td {
+    font-size: 15px;
+  }
+
+  .btnmed {
+    width: 220px;
+    height: 55px;
+    font-size: 22px;
+  }
+}

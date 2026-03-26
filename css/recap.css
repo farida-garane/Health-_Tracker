@@ -1,0 +1,198 @@
+/* 
+   FOND GLOBAL
+*/
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #cce0ff, #a0c4ff);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* 
+   CONTENEUR PRINCIPAL
+*/
+.recap {
+  width: 80%;
+  min-height: 180vh;
+  margin: 40px auto;
+  padding: 40px 50px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 25px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.recap:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.45);
+}
+
+/*
+   TITRE PRINCIPAL
+ */
+.recap h1 {
+  text-align: center;
+  font-size: 60px;
+  width: 600px;
+  height: 120px;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0d47a1;
+  background: #f4f7ff;
+  border-radius: 20px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.recap h1:hover {
+  background: #e8f0ff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/*
+   SECTIONS
+*/
+.recap section {
+  background: #f9fbff;
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.recap section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+}
+
+/* Titre de section */
+.recap h2 {
+  font-size: 40px;
+  color: #0d47a1;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #1976d2;
+  padding-bottom: 10px;
+}
+
+/* texte des paragraphes */
+.recap p {
+  font-size: 22px;
+  color: #2b4f9c;
+  margin: 8px 0;
+}
+
+/* 
+   TABLEAUX
+*/
+.recap table {
+    height: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.recap table th {
+  background: #1976d2;
+  color: white;
+  padding: 12px;
+}
+
+.recap table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.recap table tr:hover td {
+  background: #e8f0ff;
+}
+
+/* 
+   BOUTON CONTINUER
+*/
+.btncontinue {
+  display: block;
+  width: 280px;
+  height: 60px;
+  margin: 40px auto;
+  font-size: 26px;
+  border-radius: 15px;
+  border: none;
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.btncontinue:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.45);
+}
+
+/* 
+   RESPONSIVE - REDUCTION DES POLICES
+*/
+@media (max-width: 1024px) {
+  .recap {
+    width: 90%;
+    padding: 30px 30px;
+  }
+
+  .recap h1 {
+    font-size: 50px;
+    width: 90%;
+    height: 100px;
+  }
+
+  .recap h2 {
+    font-size: 32px;
+  }
+
+  .recap p {
+    font-size: 20px;
+  }
+
+  .btncontinue {
+    width: 240px;
+    height: 50px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recap h1 {
+    font-size: 40px;
+    height: 80px;
+  }
+
+  .recap h2 {
+    font-size: 28px;
+  }
+
+  .recap p {
+    font-size: 18px;
+  }
+
+  .btncontinue {
+    width: 200px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .recap section {
+    padding: 20px;
+  }
+}

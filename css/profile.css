@@ -1,0 +1,138 @@
+/*
+   FOND GLOBAL */
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #cce0ff, #a0c4ff);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* 
+   conteneur principal */
+ 
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 80%;
+  min-height: 200vh;
+  margin: 40px auto;
+  padding: 30px 50px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.profile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.45);
+}
+
+/* 
+   titre*/
+
+.profile h1 {
+  text-align: center;
+  font-size: 80px;
+  width: 500px;
+  height: 150px;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0d47a1;
+  background-color: #f4f4f4;
+  border: 1px solid #0d47a1;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* 
+   formulaire*/
+ 
+#profileform {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 40px 50px;
+  width: 100%;
+}
+
+#profileform label {
+  text-align: right;
+  font-size: 45px;
+  white-space: nowrap;
+  font-weight: bold;
+  color: #0d47a1;
+  align-self: center;
+}
+
+#profileform input,
+#profileform select {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f9fbff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* 
+   bouton
+ */
+.profilebut {
+  display: block;
+  width: 300px;
+  height: 80px;
+  margin: auto;
+  font-size: 30px;
+  border: none;
+  border-radius: 10px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+
+   /*  MEDIA QUERY (RÉDUCTION DES POLICES) */
+   
+@media (max-width: 1024px) {
+
+  .profile {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .profile h1 {
+    font-size: 50px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #profileform {
+    grid-template-columns: 1fr;
+  }
+
+  #profileform label {
+    text-align: left;
+    font-size: 28px;
+  }
+
+  #profileform input,
+  #profileform select {
+    font-size: 16px;
+  }
+
+  .profilebut {
+    width: 220px;
+    height: 60px;
+    font-size: 22px;
+  }
+}
